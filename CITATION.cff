@@ -1,0 +1,24 @@
+cff-version: 1.2.0
+title: "CAPCert reproduction artifact"
+message: "If you use this artifact, please cite both the paper and this archive."
+type: software
+authors:
+  - given-names: "[Author 1 given name]"      # complete before release
+    family-names: "[Author 1 surname]"
+    orcid: "[ORCID]"
+  - given-names: "[Author 2 given name]"
+    family-names: "[Author 2 surname]"
+repository-code: "[repository URL: insert before release]"
+doi: "[archive DOI: insert before release]"
+version: "[release tag: insert before release]"
+license: MIT
+preferred-citation:
+  type: article
+  title: "CAPCert: Obfuscation-Invariant, End-to-End Certified Robustness for
+          Graph-Based Malware Detection via Canonical Content-Addressed
+          Partitioning"
+  authors:
+    - given-names: "[Author 1 given name]"
+      family-names: "[Author 1 surname]"
+  year: 2026
+  journal: "[target journal]"

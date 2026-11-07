@@ -1,0 +1,19 @@
+# Core pipeline (everything except training) needs only these three.
+numpy>=1.26,<3
+scipy>=1.11
+PyYAML>=6.0
+
+# Formal verification (TV3)
+z3-solver>=4.13.0
+
+# Training and checkpoints.  The pipeline falls back to a numpy backend when
+# torch is absent, so TV1-TV5 and the certificate run without it.
+torch>=2.4.1
+
+# Figures
+matplotlib>=3.8
+
+# Optional: the GIN encoder of Section IV-D as published.  The artifact ships
+# a permutation-invariant stand-in that needs no PyG, because the certificate
+# is a property of the vote and not of the encoder.
+# torch-geometric>=2.6.1

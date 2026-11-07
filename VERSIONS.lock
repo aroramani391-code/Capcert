@@ -1,0 +1,25 @@
+# Pinned versions.  The deterministic stages of the pipeline -- recovery,
+# canonicalization, hashing and the certificate -- reproduce bit for bit under
+# these pins; the trained stages reproduce per seed.
+#
+# A run records the versions it actually used in every log manifest, under
+# stamp.env.packages, so a mismatch between this file and a result is visible
+# rather than silent.
+
+python: "3.11"            # tested on 3.11 and 3.13
+numpy: ">=1.26,<3"
+scipy: ">=1.11"
+pyyaml: ">=6.0"
+z3-solver: "4.13.0"       # Section VI-G
+torch: "2.4.1"            # Section VI-G
+torch-geometric: "2.6.1"  # Section VI-G; optional here, see requirements.txt
+matplotlib: ">=3.8"
+rust: "1.79"              # rust/lfr, see Cargo.toml rust-version
+ghidra: "11.3"            # used only as a lifter (Section VI-G)
+
+notes: |
+  Ghidra is not a dependency of this repository.  The manuscript uses it as a
+  P-code lifter in Stage 2; the artifact ships its own small P-code-like IR so
+  that the rewrite system, its termination measure and its critical pairs are
+  checkable without a Ghidra install.  A measured run against real PE files
+  needs Ghidra 11.3 headless as the lifter -- see docs/REAL_DATA.md.

@@ -1,0 +1,14 @@
+name: capcert
+channels: [conda-forge, pytorch]
+dependencies:
+  - python=3.11
+  - numpy>=1.26
+  - scipy>=1.11
+  - pyyaml>=6.0
+  - matplotlib>=3.8
+  - pytorch=2.4.1
+  - cpuonly
+  - pip
+  - pip:
+      - z3-solver>=4.13.0
+      # - torch-geometric==2.6.1
